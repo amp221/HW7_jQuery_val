@@ -124,6 +124,8 @@ button {
     background: white;
     margin-left: 5px;
     padding: 2px;
+    font-size: 10pt;
+    font-family: 'Times New Roman', Times, serif;
 }
 /*#buttons a {
   width: 100px;

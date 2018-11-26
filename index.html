@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--
+  Andrea Panaro
+  Assignment 7
+  practice using Validate plugin to manage error messages for user input.
+  sources: inclass examples, tips from classmates, https://www.w3schools.com, https://validatejs.org, https://www.sitepoint.com/basic-jquery-form-validation-tutorial
+-->
+<html>
+  <html lang="en">
+  <head>
+    <title>multiply</title>
+    <link rel="stylesheet" href="style.css">
+    <!--jquery-->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.18.0/dist/jquery.validate.js"></script>
+    <script src=//cdn.jsdelivr.net/npm/jquery-validation@1.18.0/dist/jquery.validate.min.js></script>
+    <script src=//cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/additional-methods.min.js></script>
+    <script src="form-validation.js"></script>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <div id="input">
+      <h2> Multiply </h2>
+      <form id = "form_input" method="post" action= "" name= "input">
+        <br>
+        <div id = "userIP">
+          <p> xBegin: </p>
+          <input type = "text" name= "xBegin" id = "xBegin" > 
+          <p> xEnd: </p>
+          <input type = "text" name= "xEnd" id = "xEnd" > 
+          <p> yBegin: </p>
+          <input type = "text" name ="yBegin"  id = "yBegin" > 
+          <p> yEnd: </p>
+          <input type = "text" name = "yEnd" id = "yEnd" > 
+        </br>
+        <button type = "button" onclick = "display()">Display</button>
+        <button type = "button" onclick = "enterNew()">New Table</button> 
+      </form>
+    </div>
+    <div id="target"></div>
+      <script src="script.js"></script>
+    </body>
+</html>

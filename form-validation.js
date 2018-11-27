@@ -2,19 +2,27 @@
 //var bX = parseInt(document.getElementById("xEnd").value);
 
 $(document).ready(function(){
+
+    // $("form[name='input']").on('submit', function(event){
+    //   event.preventDefault();
+    //   //display();
+    //   console.log("Did not reload");
+    // });
+
     $("form[name='input']").validate({
       rules: {
         xBegin: {
             required: true,
             min: 1,
             max: 75,
-            number: true,   
+            number: true,     
         },
         xEnd: {
             required: true,
             min: 1,
             max: 75,
             number: true,
+            greaterThan: "#xBegin"
         },
         yBegin: {
             required: true,
@@ -27,11 +35,11 @@ $(document).ready(function(){
             min: 1,
             max: 75,
             number: true,
+            greaterThan: "#yBegin"
         },
       },
       /* had updated a message to produce a pop-up but the pop-up but it inhibited 
-      the users ability to insert data. The greaterThan function didn't seem to work 
-      with my code for some reason so i am dealing with it else where. The location of 
+      the users ability to insert data. *The greaterThan function now works. The location of 
       the messages seemed to make sense to I decided to update the text to be more descriptive
       where I felt it was needed */
 
@@ -56,8 +64,7 @@ $(document).ready(function(){
       },
       // had issues with this
     submitHandler: function(form) {
-        location.reload();
-        form.submit();
+        display();
       }
     });
   });
